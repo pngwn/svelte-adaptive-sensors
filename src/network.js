@@ -11,6 +11,7 @@ export const getNetworkInfo = () =>
 				effectiveType: navigator.connection.effectiveType,
 				supported: true,
 			});
+			navigator.connection.addEventListener('change', update_network_status);
 		} else {
 			set({ supported: false });
 		}
@@ -22,9 +23,16 @@ export const getNetworkInfo = () =>
 			});
 		};
 
-		navigator.connection.addEventListener('change', update_network_status);
-
 		return () => {
-			navigator.connection.removeEventListener('change', update_network_status);
+			if (
+				navigator !== undefined &&
+				'connection' in navigator &&
+				'effectiveType' in navigator.connection
+			) {
+				navigator.connection.removeEventListener(
+					'change',
+					update_network_status
+				);
+			}
 		};
 	});
