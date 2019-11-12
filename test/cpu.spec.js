@@ -19,7 +19,7 @@ test('should return 17 if we have 17', () => {
 
 test('should return 1 if we have 1', () => {
 	Object.defineProperty(window.navigator, 'hardwareConcurrency', {
-		value: 17,
+		value: 1,
 		configurable: true,
 		writable: true,
 	});
