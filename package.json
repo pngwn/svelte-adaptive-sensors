@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"repository": "",
 	"scripts": {
-		"test": "jest"
+		"test": "jest --verbose"
 	},
 	"keywords": [
 		"svelte",
