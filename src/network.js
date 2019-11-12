@@ -2,6 +2,13 @@ import { readable } from 'svelte/store';
 
 export const getNetworkInfo = () =>
 	readable({}, set => {
+		const update_network_status = () => {
+			set({
+				effectiveType: navigator.connection.effectiveType,
+				supported: true,
+			});
+		};
+
 		if (
 			navigator !== undefined &&
 			'connection' in navigator &&
@@ -15,13 +22,6 @@ export const getNetworkInfo = () =>
 		} else {
 			set({ supported: false });
 		}
-
-		const update_network_status = () => {
-			set({
-				effectiveType: navigator.connection.effectiveType,
-				supported: true,
-			});
-		};
 
 		return () => {
 			if (
