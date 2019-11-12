@@ -160,7 +160,7 @@ If `supported` is `false` then the `deviceMemory`, `totalJSHeapSize`, `usedJSHea
 A simple function that returns a user's current Save Data status
 
 ```ts
-getSvaeDataInfo() = {
+getSaveDataInfo() = {
   supported: Boolean,
   saveData:? Boolean,
 };
@@ -172,7 +172,7 @@ If `supported` is `false` then the `saveData`property will not be present.
 <script>
   import { getMemoryInfo } from 'svelte-adaptive-sensors';
 
-  const { saveData, supported } = getMemoryInfo();
+  const { saveData, supported } = getSaveDataInfo();
 </script>
 
 {#if supported && !saveData}
