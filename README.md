@@ -44,7 +44,7 @@ And then use them.
 
 All functions (or stores, in the case of `getNetworkInfo`) return an object with a `supported` property. This value is `false` if the API is not supported and `true` if it is.
 
-### getCpuInfo
+### `getCpuInfo`
 
 A simple function that returns information about a user's logical processor cores using the `navigator.hardwareConcurrency` API.
 
@@ -73,7 +73,7 @@ If `supported` is `false` then the `processors` property will not be present.
 {/if}
 ```
 
-### getNetworkInfo
+### `getNetworkInfo`
 
 A function that returns a store containing information about a user's effect network speed using the `navigator.connection.effectiveType` API.
 
@@ -123,7 +123,7 @@ If `supported` is `false` then the `effectiveType` property will not be present.
 <img {...media_props} />
 ```
 
-### getMemoryInfo
+### `getMemoryInfo`
 
 A simple function that returns information about a user's deviceMemory using the `navigator.deviceMemory` and `performance.memory` APIs.
 
@@ -155,7 +155,7 @@ If `supported` is `false` then the `deviceMemory`, `totalJSHeapSize`, `usedJSHea
 {/if}
 ```
 
-### getSaveDataInfo
+### `getSaveDataInfo`
 
 A simple function that returns a user's current Save Data status
 
