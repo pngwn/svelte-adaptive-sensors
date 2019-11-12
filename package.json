@@ -1,6 +1,6 @@
 {
 	"name": "svelte-adaptive-sensors",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Sensors for Svelte to help deliver adaptive behaviour based on a user's device and network.",
 	"main": "index.js",
 	"repository": "https://github.com/pngwn/svelte-adaptive-sensors",
