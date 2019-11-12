@@ -1,4 +1,4 @@
-export { network } from './src/network.js';
-export { memory } from './src/memory.js';
-export { savedata } from './src/savedata.js';
-export { cpu } from './src/cpu.js';
+export { getNetworkInfo } from './src/network.js';
+export { getMemoryInfo } from './src/memory.js';
+export { getSaveDataInfo } from './src/savedata.js';
+export { getCpuInfo } from './src/cpu.js';

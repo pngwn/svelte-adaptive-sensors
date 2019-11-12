@@ -1,8 +1,8 @@
-import { cpu } from '../';
+import { getCpuInfo } from '../';
 
 test('should return the hardwareConcurrency value', () => {
-	const result = cpu();
-	expect(result.cpu).toBe(window.navigator.hardwareConcurrency);
+	const result = getCpuInfo();
+	expect(result.processors).toBe(window.navigator.hardwareConcurrency);
 });
 
 test('should return 17 if we have 17', () => {
@@ -12,8 +12,8 @@ test('should return 17 if we have 17', () => {
 		writable: true,
 	});
 
-	const result = cpu();
-	expect(result.cpu).toEqual(17);
+	const result = getCpuInfo();
+	expect(result.processors).toEqual(17);
 });
 
 test('should return 1 if we have 1', () => {
@@ -23,6 +23,6 @@ test('should return 1 if we have 1', () => {
 		writable: true,
 	});
 
-	const result = cpu();
-	expect(result.cpu).toEqual(1);
+	const result = getCpuInfo();
+	expect(result.processors).toEqual(1);
 });

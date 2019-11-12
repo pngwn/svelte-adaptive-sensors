@@ -1,4 +1,4 @@
-export const savedata = () => {
+export const getSaveDataInfo = () => {
 	if (
 		navigator !== undefined &&
 		'connection' in navigator &&

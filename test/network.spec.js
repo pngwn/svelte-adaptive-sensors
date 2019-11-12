@@ -1,4 +1,4 @@
-import { network } from '../';
+import { getNetworkInfo } from '../';
 import { get } from 'svelte/store';
 
 test('should return the current network type, add and remeove listeners', () => {
@@ -14,7 +14,7 @@ test('should return the current network type, add and remeove listeners', () => 
 		removeEventListener: remove,
 	};
 
-	const result = get(network());
+	const result = get(getNetworkInfo());
 
 	// `get` subscribes and unsubscribes so listeners should have been added and removed after this
 
@@ -36,7 +36,7 @@ test('when a change event is fired the value should update', () => {
 		removeEventListener: remove,
 	};
 
-	const store = network();
+	const store = getNetworkInfo();
 	let v;
 	const unsub = store.subscribe(_v => (v = _v));
 

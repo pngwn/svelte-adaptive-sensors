@@ -1,9 +1,9 @@
 {
-	"name": "svelte-adaptive-loading",
+	"name": "svelte-adaptive-sensors",
 	"version": "0.4.0",
-	"description": "Sensors for Svelte to help deliver adaptive loading based on a user's device and network.",
+	"description": "Sensors for Svelte to help deliver adaptive behaviour based on a user's device and network.",
 	"main": "index.js",
-	"repository": "https://github.com/pngwn/svelte-adaptive-loading",
+	"repository": "https://github.com/pngwn/svelte-adaptive-sensors",
 	"scripts": {
 		"test": "jest --verbose"
 	},
@@ -26,8 +26,10 @@
 		"prettier": "^1.19.1",
 		"prettier-eslint": "^9.0.0",
 		"rollup": "^1.26.5",
-		"svelte": "^3.14.0",
 		"svelte-test": "^0.4.0"
 	},
-	"dependencies": {}
+	"dependencies": {},
+	"peerDependencies": {
+		"svelte": "^3.14.0"
+	}
 }

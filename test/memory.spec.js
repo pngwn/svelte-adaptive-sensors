@@ -1,7 +1,7 @@
-import { memory } from '../';
+import { getMemoryInfo } from '../';
 
 test(`supported should be false if it isn't supported`, () => {
-	const result = memory();
+	const result = getMemoryInfo();
 
 	expect(result.supported).toBe(false);
 });
@@ -21,7 +21,7 @@ test(`it should work`, () => {
 		jsHeapSizeLimit: fake_memory.jsHeapSizeLimit,
 	};
 
-	const result = memory();
+	const result = getMemoryInfo();
 
 	expect(result).toEqual({ ...fake_memory, supported: true });
 });
@@ -41,7 +41,7 @@ test(`it should work with anotehr ste of random values`, () => {
 		jsHeapSizeLimit: fake_memory.jsHeapSizeLimit,
 	};
 
-	const result = memory();
+	const result = getMemoryInfo();
 
 	expect(result).toEqual({ ...fake_memory, supported: true });
 });

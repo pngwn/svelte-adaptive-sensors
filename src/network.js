@@ -1,6 +1,6 @@
 import { readable } from 'svelte/store';
 
-export const network = () =>
+export const getNetworkInfo = () =>
 	readable({}, set => {
 		if (
 			navigator !== undefined &&

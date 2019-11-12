@@ -1,4 +1,4 @@
-export const memory = () => {
+export const getMemoryInfo = () => {
 	if (navigator !== undefined && 'deviceMemory' in navigator) {
 		const performance_memory =
 			'memory' in performance ? performance.memory : null;

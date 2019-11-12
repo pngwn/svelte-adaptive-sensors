@@ -1,8 +1,6 @@
-import { readable } from 'svelte/store';
-
-export const cpu = () => {
+export const getCpuInfo = () => {
 	if (navigator !== undefined && 'hardwareConcurrency' in navigator) {
-		return { cpu: navigator.hardwareConcurrency };
+		return { processors: navigator.hardwareConcurrency, supported: true };
 	} else {
 		return { supported: false };
 	}
