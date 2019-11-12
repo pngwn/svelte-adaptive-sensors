@@ -1,9 +1,8 @@
 import { cpu } from '../';
-import { get } from 'svelte/store';
 
 test('should return the hardwareConcurrency value', () => {
 	const result = cpu();
-	expect(get(result).cpu).toBe(window.navigator.hardwareConcurrency);
+	expect(result.cpu).toBe(window.navigator.hardwareConcurrency);
 });
 
 test('should return 17 if we have 17', () => {
@@ -14,7 +13,7 @@ test('should return 17 if we have 17', () => {
 	});
 
 	const result = cpu();
-	expect(get(result).cpu).toEqual(17);
+	expect(result.cpu).toEqual(17);
 });
 
 test('should return 1 if we have 1', () => {
@@ -25,5 +24,5 @@ test('should return 1 if we have 1', () => {
 	});
 
 	const result = cpu();
-	expect(get(result).cpu).toEqual(1);
+	expect(result.cpu).toEqual(1);
 });

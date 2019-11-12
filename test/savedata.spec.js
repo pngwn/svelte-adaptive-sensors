@@ -1,9 +1,8 @@
 import { savedata } from '../';
-import { get } from 'svelte/store';
 
 test('x.supported should be false when not supported', () => {
 	const result = savedata();
-	expect(get(result).supported).toBe(false);
+	expect(result.supported).toBe(false);
 });
 
 test('if saveData is true then guess what', () => {
@@ -12,8 +11,8 @@ test('if saveData is true then guess what', () => {
 	};
 
 	const result = savedata();
-	expect(get(result).saveData).toEqual(true);
-	expect(get(result).saveData).toEqual(navigator.connection.saveData);
+	expect(result.saveData).toEqual(true);
+	expect(result.saveData).toEqual(navigator.connection.saveData);
 });
 
 test('if saveData is false then guess what', () => {
@@ -22,6 +21,6 @@ test('if saveData is false then guess what', () => {
 	};
 
 	const result = savedata();
-	expect(get(result).saveData).toEqual(false);
-	expect(get(result).saveData).toEqual(navigator.connection.saveData);
+	expect(result.saveData).toEqual(false);
+	expect(result.saveData).toEqual(navigator.connection.saveData);
 });

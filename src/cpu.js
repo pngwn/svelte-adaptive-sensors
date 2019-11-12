@@ -1,10 +1,9 @@
 import { readable } from 'svelte/store';
 
-export const cpu = () =>
-	readable({}, set => {
-		if (navigator !== undefined && 'hardwareConcurrency' in navigator) {
-			set({ cpu: navigator.hardwareConcurrency });
-		} else {
-			set({ supported: false });
-		}
-	});
+export const cpu = () => {
+	if (navigator !== undefined && 'hardwareConcurrency' in navigator) {
+		return { cpu: navigator.hardwareConcurrency };
+	} else {
+		return { supported: false };
+	}
+};

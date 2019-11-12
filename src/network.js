@@ -8,7 +8,7 @@ export const network = () =>
 			'effectiveType' in navigator.connection
 		) {
 			set({
-				effectiveConnectionType: navigator.connection.effectiveType,
+				effectiveType: navigator.connection.effectiveType,
 				supported: true,
 			});
 		} else {
@@ -16,7 +16,10 @@ export const network = () =>
 		}
 
 		const update_network_status = () => {
-			set({ effectiveConnectionType: navigator.connection.effectiveType });
+			set({
+				effectiveType: navigator.connection.effectiveType,
+				supported: true,
+			});
 		};
 
 		navigator.connection.addEventListener('change', update_network_status);
