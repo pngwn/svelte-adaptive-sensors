@@ -4,6 +4,8 @@ Sensors to help you deliver adaptive sensors to users depending on their network
 
 This library makes it easier to get information about a user's device, settings and network and alter your app's behaviour using these metrics.
 
+[Check it out liiiiiiive.](https://svelte.dev/repl/e00898da2de14e40a337a6ea5ac060f8?version=3.14.0)
+
 Currently 4 APIs are supported:
 
 - [Network via effective connection type](https://developer.mozilla.org/en-US/docs/Web/API/NetworkInformation/effectiveType)
