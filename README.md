@@ -100,19 +100,19 @@ If `supported` is `false` then the `effectiveType` property will not be present.
     let props;
     switch(network_type) {
       case 'slow-2g':
-        media = { src: low_res, alt: 'low resolution' };
+        props = { src: low_res, alt: 'low resolution' };
         break;
       case '2g':
-        media = { src: med_res, alt: 'medium resolution' };
+        props = { src: med_res, alt: 'medium resolution' };
         break;
       case '3g':
-        media = { src: hi_res, alt: 'high resolution' };
+        props = { src: hi_res, alt: 'high resolution' };
         break;
       case '4g':
-        media = { src: very_hi_res, alt: 'very high resolution' };
+        props = { src: very_hi_res, alt: 'very high resolution' };
         break;
       default:
-        media = { src: med_res, alt: 'medium resolution' };
+        props = { src: med_res, alt: 'medium resolution' };
         break;
     }
 
